@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 CourierNewPS-BoldMT;
+\f3\fmodern\fcharset0 CourierNewPSMT;\f4\fnil\fcharset0 TrebuchetMS;}
+{\colortbl;\red255\green255\blue255;\red251\green0\blue7;\red255\green255\blue255;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c0\c0\c100000;\csgenericrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{none\}.}{\leveltext\leveltemplateid1\'01.;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+{\info
+{\keywords cursorLocation=1444}}\margl1008\margr1008\margt1008\vieww22940\viewh16720\viewkind1\viewscale165
+\deftab720
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\qc\partightenfactor0
+\ls1\ilvl0
+\f0\b\fs26\fsmilli13333 \cf2 \cb3 POPULAR ENUMERABLES\
+\
+\pard\tx560\pardeftab720\partightenfactor0
+
+\f1\b0\fs24 \cf4 \cb1 \expnd0\expndtw0\kerning0
+\uc0\u8232 
+\f0\b \cf2 \cb3 each
+\b0 : \
+\cf4 Use each when you want to run some block of code for each element in an Array (or Hash), returns 	 the 
+\b original array.
+\b0 \
+\cb1 \uc0\u8232 
+\b \cf2 \cb3 map 
+\b0 : \
+\cf4 Returns a 
+\b new array
+\b0  with the results of running the called block once for each element.\cf5 \
+
+\f1 \cf4 \cb1 \uc0\u8232 
+\f0\b \cf2 \cb3 reduce: \
+\pard\tx560\pardeftab720\partightenfactor0
+
+\b0 \cf6 to sum: 	array.reduce(0) \{ | sum, element | sum + element \}  *must use for string elements!\
+		 	array.reduce(:+) sets the starting sum to first element\
+to multiply: 	array.reduce(1) \{  | product, element|  product * element \} \
+			array.reduce(:*) sets the starting product to the first element 	\
+*array.reduce(\'93) sets the accumulated value to an empty string. 
+\b \cf2 \
+\pard\tx560\pardeftab720\partightenfactor0
+
+\b0 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf2 \cb3 select:\
+
+\b0 \cf4 Returns 
+\b an array
+\b0  with all the elements for which the called code block returns 
+\b true
+\b0 .\
+Ex: 	\cf5 nums = (1..10).to_a 	\cb1 \uc0\u8232 \cb3 	nums.select do | i | \cf4 \cb1 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf5 \cb3  	     i % 3 == 0\
+	end           		# => [3, 6, 9]
+\b\fs26\fsmilli13333 \
+\pard\pardeftab720\partightenfactor0
+
+\b0\fs24 \cf5 \
+
+\b \cf2 count: \
+
+\b0 \cf4 Returns the 
+\b number of items
+\b0  in the collection it's called on. \
+In a hash, count 
+\b returns the number of key-value pairs
+\b0 .\
+\cf5 Ex: 	nums = [1, 4, 5, 6, 7]\cb1 \uc0\u8232 \cb3 	nums.count # => 5\
+\cf4 \
+
+\b \cf2 include?: \
+
+\b0 \cf4 Takes an object as a parameter and 
+\b returns true
+\b0  if any item in the collection is equal to that object.\cb1 \uc0\u8232 \cf5 \cb3 Ex:	nums = [1, 4, 5, 6, 7]\cb1 \uc0\u8232 \cb3 	nums.include?(3) 	# => false \cf4 \cb1 \
+\cf5 \cb3 	nums.include?(4) 	# => true\
+\
+
+\b \cf2 any?
+\f2 :
+\f3\b0  
+\f0 \cf4 * #all? and #none? methods work similarly. 
+\f3 \cf2 \
+
+\f0\b \cf4 Returns true
+\b0  if the code block returns true for any of the members of the collection.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \uc0\u8232 \cf5 \cb3 Ex:	nums = [2, 3, 5, 7]  	# check for even numbers \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 	nums.any? do |i|\
+  	      i % 2 == 0\
+	end 			# => true \
+\
+\
+\
+\
+\pard\pardeftab720\sl312\slmult1\qc\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sl312\slmult1\partightenfactor0
+
+\f4\fs22 \cf4 \cb1 \'b7 \cf5 #all?\uc0\u8232 \cf4 \'b7 \cf5 #an\uc0\u8232 \cf4 \'b7 \cf5 #chunk\uc0\u8232 \cf4 \'b7 \cf5 #collect\uc0\u8232 \cf4 \'b7 \cf5 #collect_concat\uc0\u8232 \cf4 \'b7 \cf5 #count\uc0\u8232 \cf4 \'b7 \cf5 #cycle\uc0\u8232 \cf4 \'b7 \cf5 #detect\uc0\u8232 \cf4 \'b7 \cf5 #drop\uc0\u8232 \cf4 \'b7 \cf5 #drop_while\uc0\u8232 \cf4 \'b7 \cf5 #each_cons\uc0\u8232 \cf4 \'b7 \cf5 #each_entry\uc0\u8232 \cf4 \'b7 \cf5 #each_slice\uc0\u8232 \cf4 \'b7 \cf5 #each_with_index \cf4 \'b7\cf5 #each_with_object\
+\cf4 \'b7 \cf5 #entries\
+\cf4 \'b7 \cf5 #find\uc0\u8232 \cf4 \'b7 \cf5 #find_all\uc0\u8232 \cf4 \'b7 \cf5 #find_index \cf4 \'b7 \cf5 #first\uc0\u8232 \cf4 \'b7 \cf5 #flat_map\uc0\u8232 \cf4 \'b7 \cf5 #grep\uc0\u8232 \cf4 \'b7 \cf5 #group_by \cf4 \'b7 \cf5 #include?\uc0\u8232 \cf4 \'b7 \cf5 #inject\uc0\u8232 \cf4 \'b7 \cf5 #map\uc0\u8232 \cf4 \'b7 \cf5 #max\uc0\u8232 \cf4 \'b7 \cf5 #max_by\uc0\u8232 \cf4 \'b7 \cf5 #member? \cf4 \'b7 \cf5 #min\uc0\u8232 \cf4 \'b7 \cf5 #min_by\uc0\u8232 \cf4 \'b7 \cf5 #minmax \
+\cf4 \'b7 \cf5 #minmax_by \
+\cf4 \'b7 \cf5 #none?\uc0\u8232 \cf4 \'b7 \cf5 #one?\uc0\u8232 \cf4 \'b7 \cf5 #partition 
+\f0 \cf4 \
+
+\f4 \cf4 \'b7 \cf5 #reduce\uc0\u8232 \cf4 \'b7 \cf5 #reject\uc0\u8232 \cf4 \'b7 \cf5 #reverse_each \cf4 \'b7 \cf5 #select\uc0\u8232 \cf4 \'b7 \cf5 #slice_before \cf4 \'b7 \cf5 #sort\uc0\u8232 \cf4 \'b7 \cf5 #sort_by\uc0\u8232 \cf4 \'b7 \cf5 #take\uc0\u8232 \cf4 \'b7 \cf5 #take_while\uc0\u8232 \cf4 \'b7 \cf5 #to_a\uc0\u8232 \cf4 \'b7 \cf5 #zip }
